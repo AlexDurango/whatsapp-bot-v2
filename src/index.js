@@ -43,4 +43,15 @@ client.on("ready", () => {
 
 client.initialize();
 
-setInterval(client.sendMessage(`${country_code}${number}${identificador}`, `Enviado desde Clever Cloud`), 30000)
+function main () {
+    let date = new Date()
+    let hours= date.getHours()
+    let minutes = date.getMinutes()
+
+    if (minutes == 0){
+        client.sendMessage(`${country_code}${number}${identificador}`, `Enviado desde Clever Cloud, son las ${hours}:${minutes}`)
+    }
+    
+}
+
+setInterval(main, 59999)
