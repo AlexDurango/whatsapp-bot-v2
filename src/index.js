@@ -48,7 +48,7 @@ function main () {
     let hours= date.getHours()
     let minutes = date.getMinutes()
 
-    if (minutes == 0){
+    if (minutes == 0 || minutes == 15 || minutes == 30 || minutes == 45){
         client.sendMessage(`${country_code}${number}${identificador}`, `Enviado desde Clever Cloud, son las ${hours}:${minutes}`)
     }
     
