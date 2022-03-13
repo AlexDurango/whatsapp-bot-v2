@@ -1,6 +1,6 @@
 // Librerias
-const qrcode = require("qrcode-terminal");
-const { Client, LocalAuth, MessageMedia } = require("whatsapp-web.js");
+//const qrcode = require("qrcode-terminal");
+const { Client, LocalAuth } = require("whatsapp-web.js");
 
 const country_code = '57';
 const number = '3135310417';
@@ -12,9 +12,9 @@ const client = new Client({
     })
 });
 
-client.on("qr", (qr) => {
-    qrcode.generate(qr, { small: true });
-});
+// client.on("qr", (qr) => {
+//     qrcode.generate(qr, { small: true });
+// });
 
 
 client.on("message",  message => {
