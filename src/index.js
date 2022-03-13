@@ -23,24 +23,9 @@ client.on("message",  message => {
     
 } );
 
-function main () {
-    let date = new Date()
-
-    let hours = date.getHours()
-    let minutes = date.getMinutes()
-
-    //console.log(minutes)
-
-    if (minutes == 0) {
-        client.sendMessage(`${country_code}${number}${identificador}`, `Son las ${hours}:${minutes}, guapo`)
-    }
-
-}
-
 client.on("ready", () => {
     console.log('Working')
-
-    setInterval(main, 30000)
+    client.sendMessage(`${country_code}${number}${identificador}`, `Enviado desde Clever Cloud`)
 })
 
 
