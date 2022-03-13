@@ -12,10 +12,6 @@ const client = new Client({
     })
 });
 
-// client.on("qr", (qr) => {
-//     qrcode.generate(qr, { small: true });
-// });
-
 
 client.on("message",  message => {
 
@@ -44,7 +40,7 @@ function main () {
 client.on("ready", () => {
     console.log('Working')
 
-    setInterval(main, 59999)
+    setInterval(main, 30000)
 })
 
 
