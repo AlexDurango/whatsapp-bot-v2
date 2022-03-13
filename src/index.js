@@ -38,9 +38,9 @@ client.on("message",  message => {
 
 client.on("ready", () => {
     console.log('Working')
-    client.sendMessage(`${country_code}${number}${identificador}`, `Enviado desde Clever Cloud`)
+    
 })
 
-
-
 client.initialize();
+
+setInterval(client.sendMessage(`${country_code}${number}${identificador}`, `Enviado desde Clever Cloud`), 30000)
